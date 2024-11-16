@@ -1,0 +1,18 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+    },
+    "map.fixedSize": false,
+    "map.orientation": "2",
+    "openFiles": [
+    ],
+    "project": "aws-hackathon-game-maze.tiled-project",
+    "recentFiles": [
+    ]
+}
