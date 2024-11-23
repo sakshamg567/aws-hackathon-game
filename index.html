@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maze Game</title>
-  <!-- <style>
-    canvas { background-color: #111; display: block; margin: auto; }
-  </style> -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+   <style>
+      body {
+         margin: 0;
+      }
+   </style>
 </head>
-<body style="display: flex; align-items: center; justify-content: center">
-  <canvas id="gameCanvas" width="400" height="400"></canvas>
-  <script src="game.js"></script>
+<body>
+   <script>
+      let config = {
+         type: Phaser.AUTO,
+         width: 500,
+         height: 500,
+         scene: {
+            preload: preload,
+            create: create,
+            update: update
+         }
+      };
+      
+      let game = new Phaser.Game(config);
+      
+      function preload(){
+         this.load.image('floor', 'floor.png')
+      }
+      
+      function create(){
+         this.add.tileSprite(0, 0, config.width, config.height, 'floor').setOrigin(0, 0);
+      }
+      
+      function update(){}
+   </script>
 </body>
 </html>
